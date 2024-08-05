@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiAppProj.RegistrationPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:models="clr-namespace:MauiAppProj.Model"
+    Title="RegistrationPage"
+    x:DataType="models:User">
+
+    <ScrollView Background="AntiqueWhite">
+        <VerticalStackLayout Margin="10">
+
+            <Label
+                Margin="0,30,0,0"
+                FontFamily="IndieFlower"
+                FontSize="40"
+                HorizontalOptions="Center"
+                Text="create new acount"
+                TextColor="Brown"
+                VerticalOptions="Center" />
+            <Frame
+                Margin="0,50,0,0"
+                BackgroundColor="Ivory"
+                BorderColor="Ivory"
+                CornerRadius="15"
+                HasShadow="False"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <Entry
+                    x:Name="enName"
+                    FontSize="15"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="name"
+                    PlaceholderColor="Brown"
+                    Text="{Binding Name}"
+                    TextColor="Brown" />
+            </Frame>
+            <Frame
+                BackgroundColor="Ivory"
+                BorderColor="Ivory"
+                CornerRadius="14"
+                HasShadow="False"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <Entry
+                    x:Name="enUsername"
+                    FontSize="15"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="user name"
+                    PlaceholderColor="Brown"
+                    Text="{Binding UserName}"
+                    TextColor="Brown" />
+            </Frame>
+            <Frame
+                BackgroundColor="ivory"
+                BorderColor="Ivory"
+                CornerRadius="15"
+                HasShadow="False"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <Entry
+                    x:Name="enEmail"
+                    FontSize="15"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="email"
+                    PlaceholderColor="Brown"
+                    Text="{Binding Email}"
+                    TextColor="Brown" />
+            </Frame>
+            <Frame
+                BackgroundColor="ivory"
+                BorderColor="Ivory"
+                CornerRadius="15"
+                HasShadow="False"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <Entry
+                    x:Name="enMobile"
+                    FontSize="15"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="Phone"
+                    PlaceholderColor="Brown"
+                    Text="{Binding PhoneNumber}"
+                    TextColor="Brown" />
+            </Frame>
+            <Frame
+                BackgroundColor="ivory"
+                BorderColor="Ivory"
+                CornerRadius="15"
+                HasShadow="False"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <Entry
+                    x:Name="enPassword"
+                    FontSize="15"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Placeholder="password"
+                    PlaceholderColor="Brown"
+                    Text="{Binding Password}"
+                    TextColor="Brown" />
+            </Frame>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Frame
+                    BackgroundColor="ivory"
+                    BorderColor="Ivory"
+                    CornerRadius="15"
+                    HasShadow="False"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
+                    WidthRequest="160">
+                    <DatePicker
+                        x:Name="dpDate"
+                        Date="{Binding BirthDate}"
+                        HorizontalOptions="Center"
+                        MinimumWidthRequest="85"
+                        TextColor="Brown"
+                        PropertyChanged="dpDate_PropertyChanged"/>
+                </Frame>
+                <Frame
+                    BackgroundColor="ivory"
+                    BorderColor="Ivory"
+                    CornerRadius="15"
+                    HasShadow="False"
+                    HeightRequest="80"
+                    HorizontalOptions="Center"
+                    WidthRequest="120">
+                    <Label
+                        x:Name="lbAge"
+                        FontSize="15"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Age}"
+                        TextColor="Brown"                      
+                        VerticalTextAlignment="Center" />
+                </Frame>
+            </HorizontalStackLayout>
+            <Frame
+                x:Name="frErr"
+                BackgroundColor="AntiqueWhite"
+                BorderColor="AntiqueWhite"
+                CornerRadius="15"
+                HasShadow="False"
+                HeightRequest="80"
+                HorizontalOptions="Center"
+                WidthRequest="280">
+                <Label
+                    x:Name="lbErr"
+                    FontSize="8"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    TextColor="Red" />
+            </Frame>
+            <Button
+                x:Name="btnReg"
+                BackgroundColor="#f5b041"
+                Clicked="btnReg_Clicked"
+                FontFamily="IndieFlower"
+                FontSize="20"
+                HeightRequest="50"
+                Text="registration"
+                TextColor="Brown"
+                WidthRequest="270" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
