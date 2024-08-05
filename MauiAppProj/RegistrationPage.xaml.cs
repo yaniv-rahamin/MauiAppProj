@@ -60,7 +60,9 @@ public partial class RegistrationPage : ContentPage
 
     private bool IsVailDName()
     {
-       string name=enName.Text.Trim();
+        string name=string.Empty;
+        if (enName!=null)
+            name=enName.Text;
         if (string.IsNullOrEmpty(name)) 
             return false;
         for (char c = '0' ; c <= '9'; c++)
