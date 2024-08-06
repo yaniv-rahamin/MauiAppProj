@@ -8,13 +8,13 @@ namespace MauiAppProj.Model
 {
     internal class User : ObservableObject
     {
-        private string name;
-        private string userName;
-        private string email;
-        private string password;
-        private string phoneNumber;
+        private string? name;
+        private string? userName;
+        private string? email;
+        private string? password;
+        private string? phoneNumber;
         private DateTime birthDate;
-        private string age;
+        private string? age;
        
 
 
